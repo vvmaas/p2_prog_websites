@@ -3,9 +3,15 @@ body {
     font-family: "Kanit", sans-serif;
     background-color: #f5f5f5;
     color: #333;
+    margin-top: 70px;
   }
   
   .navbar {
+    position: fixed; /* Fixo no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,6 +21,11 @@ body {
 
   .navbar h1 {
     font-family: 'Ninja Naruto', sans-serif;
+  }
+
+  .navbar button {
+    z-index: 1003;
+    margin-right: 80px;
   }
   
   .menu {

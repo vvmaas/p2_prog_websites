@@ -147,3 +147,18 @@ function applyThemeToModals() {
   toggle.addEventListener('click', applyThemeToModals);
   
   document.addEventListener('DOMContentLoaded', applyThemeToModals);
+
+  const menuLinks = document.querySelectorAll('.menu a');
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault(); 
+    const targetId = this.getAttribute('href').slice(1);
+    const targetSection = document.getElementById(targetId);
+    
+    window.scrollTo({
+      top: targetSection.offsetTop - 50, 
+      behavior: 'smooth'
+    });
+  });
+});
