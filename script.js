@@ -1,14 +1,11 @@
-// Modal de personagens
 function openModal(character) {
   alert(`Exibir informações detalhadas sobre ${character}.`);
 }
 
-// Abrir vídeo
 function openVideo(trailerId) {
   alert(`Abrir vídeo do trailer: ${trailerId}`);
 }
 
-// Formulário de contato
 function handleSubmit(event) {
   event.preventDefault();
   document.getElementById('success-message').style.display = 'block';
@@ -91,7 +88,6 @@ function openVideo(trailerId) {
       iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
       iframe.allowFullscreen = true;
   
-      // Criar o modal ou pop-up para o vídeo
       const modal = document.createElement('div');
       modal.id = 'video-modal';
       modal.classList.add('modal');
@@ -126,15 +122,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme') || 'light';
   if (savedTheme === 'dark') {
     document.body.classList.add('dark-theme');
-    toggle.textContent = '☀️'; // Update button icon to sun for dark mode
+    toggle.textContent = '☀️';
   }
 });
 
-// Add toggle functionality
 toggle.addEventListener('click', () => {
   const isDark = document.body.classList.toggle('dark-theme');
-  toggle.textContent = isDark ? '☀️' : '🌙'; // Update button icon
-  localStorage.setItem('theme', isDark ? 'dark' : 'light'); // Save theme
+  toggle.textContent = isDark ? '☀️' : '🌙'; 
+  localStorage.setItem('theme', isDark ? 'dark' : 'light'); 
 });
 
 
@@ -149,8 +144,6 @@ function applyThemeToModals() {
     });
   }
   
-  // Call applyThemeToModals on theme change
   toggle.addEventListener('click', applyThemeToModals);
   
-  // Apply theme to modals on page load
   document.addEventListener('DOMContentLoaded', applyThemeToModals);
