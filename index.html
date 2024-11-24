@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naruto</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.cdnfonts.com/css/ninja-naruto" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1>Naruto</h1>
+      <ul class="menu">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#characters">Personagens</a></li>
+        <li><a href="#episodes">Episodios</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+      <button id="theme-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <section id="home" class="banner">
+    <img src="./assets/naruto-banner.jpg" alt="Banner Naruto">
+    <p>Naruto segue a jornada de Naruto Uzumaki, um jovem ninja que sonha em se tornar Hokage e conquistar o respeito de sua vila. Com o espírito indomável e a Raposa de Nove Caudas selada dentro de si, ele enfrenta desafios, lutas épicas e a busca por aceitação.</p>
+    <p>A série mistura ação, humor e lições de amizade, explorando temas como superação e sacrifício. Ambientada em um mundo cheio de clãs e técnicas ninja, Naruto cativou fãs em todo o mundo.</p>
+  </section>
+ 
+  <section id="characters" class="gallery">
+    <h2>Galeria de Personagens</h2>
+    <div class="character-card" onclick="openModal('naruto')">
+      <img src="./assets/naruto.jpg" alt="Naruto Uzumaki">
+      <h3>Naruto Uzumaki</h3>
+      <p>O ninja determinado a se tornar Hokage.</p>
+    </div>
+    <div class="character-card" onclick="openModal('sasuke')">
+      <img src="./assets/sasuke.jpg" alt="Sasuke Uchiha">
+      <h3>Sasuke Uchiha</h3>
+      <p>Um gênio em busca de vingança.</p>
+    </div>
+    <div class="character-card" onclick="openModal('kakashi')">
+      <img src="./assets/kakashi.jpg" alt="Kakashi Hatake">
+      <h3>Kakashi Hatake</h3>
+      <p>Um ninja sensei com habilidades incríveis.</p>
+    </div>
+  </section>
+
+  <section id="episodes" class="favorites">
+    <h2>Episódios Favoritos</h2>
+    <div class="episode-card">
+      <img src="./assets/ep18.png" alt="Episódio 18">
+
+      <h3>As Armas Conhecidas como Shinobi</h3>
+      <p>Episódio 18</p>
+      <p>Fim da luta do time 7 contra Zabuza e Haku</p>
+      <button onclick="openVideo('trailer1')">Assistir o Episódio</button>
+    </div>
+    <div class="episode-card">
+      <img src="./assets/ep48.jpg" alt="Episódio 48">
+
+      <h3>Gaara vs. Rock Lee:<br> O Poder da Juventude Explode!</h3>
+      <p>Episódio 48</p>
+      <p>Gaara e Rock Lee se enfrentam no exame chunin</p>
+      <button onclick="openVideo('trailer2')">Assistir o Episódio</button>
+    </div>
+    <div class="episode-card">
+      <img src="./assets/ep94.jpg" alt="Episódio 94">
+
+      <h3>Atacar! A Fúria do Rasengan!</h3>
+      <p>Episódio 94</p>
+      <p>Naruto usa o Rasengan para defender Tsunade</p>
+      <button onclick="openVideo('trailer3')">Assistir o Episódio</button>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contato</h2>
+    <form id="contact-form" onsubmit="handleSubmit(event)">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="success-message" style="display: none;">Mensagem enviada com sucesso!</p>
+  </section>
+
+  
+
+  <script src="script.js"></script>
+  <footer class="footer">
+    <p>Victor Hugo Vermaas de Sá - 202410151</p>
+  </footer>
+</body>
+</html>
